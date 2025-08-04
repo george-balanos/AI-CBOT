@@ -1,0 +1,75 @@
+.credential-wrapper {
+    opacity: 0;
+
+    height: fit-content;
+    width: 500px;
+
+    /* background-color: #3b3b5b; */
+
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.6s ease, opacity 0.4s ease;
+}
+
+.credential-wrapper.credential-wrapper-on {
+    transform: translateY(-25px);
+    opacity: 100;
+}
+
+label {
+    color: white;
+
+    font-family: 'Source Sans 3';
+    font-weight: 200;
+    font-size: 2em;
+}
+
+#username-box {
+    all: unset;
+
+    height: 30px;
+    width: 200px;
+
+    padding: 5px;
+
+    background-color: #3b3b5b;
+
+    border-radius: 10px;
+
+    text-align: center;
+    font-family: 'Source Sans 3';
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+#login-button {
+
+    margin-left: 10px;
+
+    padding-right: 50px;
+
+    height: 30px;
+    width: 100px;
+
+    font-family: 'Source Sans 3';
+    font-size: 1.1em;
+    font-weight: 400;
+
+    background-color: #21262D;
+    color: white;
+    
+    border-radius: 10px;
+}
+
+/* #login-form {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */

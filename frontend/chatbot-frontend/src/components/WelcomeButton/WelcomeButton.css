@@ -1,0 +1,24 @@
+.welcome-button {
+    border: none;
+    
+    height: 50px;
+    width: 50px;
+
+    rotate: 45deg;
+    border-right: 4px solid white;
+    border-top: 4px solid white;
+
+    background: none;
+    cursor: pointer;
+
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.welcome-button:hover {
+    transform: translate(5px, -5px);
+}
+
+.welcome-button.clicked {
+    transform: translate(500px, -500px);
+    opacity: 0;
+}
