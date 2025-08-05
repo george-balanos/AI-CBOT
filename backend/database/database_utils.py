@@ -29,7 +29,8 @@ def execute_sql_command(connection, sql_command, values=None):
             result = cursor.execute(sql_command)
         connection.commit()
     finally:
-        connection.close()
+        # connection.close()
+        pass
     return result
 
 def execute_sql_query(connection, sql_query, values=None):
@@ -41,43 +42,35 @@ def execute_sql_query(connection, sql_query, values=None):
             cursor.execute(sql_query)
         results = cursor.fetchall()
     finally:
-        connection.close()
+        # connection.close()
+        pass
     return results
 
 
-
-
 if __name__ == "__main__":
-    # pass
+    db_name = "chatbot.db"
+    connection = create_database(db_name)
 
-    # # Create database
-    # create_database("chatbot.db")
+    # Create users table
+    users_columns = {
+        "user_id": "INTEGER PRIMARY KEY AUTOINCREMENT",
+        "username": "TEXT NOT NULL UNIQUE"
+    }
+    users_sql = create_table("users", users_columns)
+    execute_sql_command(connection, users_sql)
 
-    # # Create Table: users
-
-    # connection = create_database("chatbot.db")
-
-    # columns = {
-    #     "user_id": "INTEGER PRIMARY KEY AUTOINCREMENT",
-    #     "username": "TEXT NOT NULL UNIQUE"
-    # }
-
-    # sql_command = create_table("users", columns)
-    # execute_sql_command(connection, sql_command)
-
-    # Create Table: user_message_history
-
-    connection = create_database("chatbot.db")
-
-    columns = {
+    # Create user_message_history table with foreign key constraint
+    message_columns = {
         "message_id": "INTEGER PRIMARY KEY AUTOINCREMENT",
         "user_id": "INTEGER NOT NULL",
-        "sender": "TEXT NOT NULL",  # 'user' or 'bot'
+        "sender": "TEXT NOT NULL",
         "message": "TEXT NOT NULL",
         "timestamp": "DATETIME DEFAULT CURRENT_TIMESTAMP",
-        "": "FOREIGN KEY(user_id) REFERENCES users(user_id)"
+        "": "FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE CASCADE"
     }
 
-    sql_command = create_table("user_message_history", columns)
-    execute_sql_command(connection, sql_command)
+    message_sql = create_table("user_message_history", message_columns)
+    execute_sql_command(connection, message_sql)
+
+    connection.close()
 
