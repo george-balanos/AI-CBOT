@@ -12,14 +12,14 @@ An AI-powered chatbot app built with **FastAPI backend**, **React frontend**, **
 - AI responses powered by Ollama LLM via LangChain
 
   ## 🧱 Project Structure
-  backend/
-  ├── backend_api/
-  │ └── handlers.py # FastAPI endpoints
-  ├── database_utils.py # SQLite helpers
-  └── requirements.txt
+  backend/ <br>
+  ├ backend_api/ <br>
+  │ └ handlers.py # FastAPI endpoints <br>
+  ├ database_utils.py # SQLite helpers <br>
+  └ requirements.txt <br>
   
-  frontend/
-  └── React app (WelcomePage & ChatBoard)
+  frontend/ <br>
+  └ React app (WelcomePage & ChatBoard)
 
   ## 🚀 Quick Start
 
