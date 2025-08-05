@@ -4,6 +4,12 @@ An AI-powered chatbot app built with **FastAPI backend**, **React frontend**, **
 
 ---
 
+
+
+https://github.com/user-attachments/assets/5cc11d04-95a6-4202-a29a-c53fe92aa5df
+
+
+
 ## Features
 
 - User login and unique username validation  
