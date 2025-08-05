@@ -63,3 +63,5 @@ https://github.com/user-attachments/assets/5cc11d04-95a6-4202-a29a-c53fe92aa5df
   ```
   * users: Stores unique usernames.
   * user_message_history: Tracks all chat messages linked to users, with timestamps and sender info.
+
+  <h2> LLM: llama3.2:3b-instruct-q8_0 (via OLLAMA) </h2>
