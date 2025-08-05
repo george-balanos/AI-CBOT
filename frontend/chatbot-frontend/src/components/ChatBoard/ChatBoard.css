@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.input-box {
+    height: 50px;
+    width: 800px;
+
+    background-color: #3b3b5b;
+
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#user_question {
+    all: unset;
+
+    height: 45px;
+    width: 780px;
+
+    background-color: #3b3b5b;
+
+    border-radius: 30px;
+    padding-left: 15px;
+}
+
+.display-panel {
+    height: 70%;
+    width: 800px;
+
+    background-color: #3b3b5b;
+    
+    margin-top: 20px;
+
+    border-radius: 20px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 10px;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #888 #2e2e4b; /* Firefox */
+}
+
+/* Chrome, Safari, Edge */
+.display-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.display-panel::-webkit-scrollbar-track {
+    background: #2e2e4b;
+    border-radius: 10px;
+}
+
+.display-panel::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 2px solid #2e2e4b;
+}
+
+.display-panel::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+}
+
+.user-info-section {
+    height: fit-content;
+    width: 100%;
+    padding: 15px;
+    background-color: #1e1e2f;
+    display: flex;
+    justify-content: space-between; /* <-- this is the key */
+    align-items: center;
+    color: white;
+}
+
+.user-info-right {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 1.5em;
+    font-family: "Source Sans 3";
+    font-weight: 700;
+    font-style: italic;
+    padding-left: 10px;
+}
+
+.username-text {
+    margin-left: 5px;
+    margin-right: 1%;
+
+    padding-right: 5px;
+
+    font-size: 1.1em;
+    font-family: "Source Sans 3";
+    font-weight: 200;
+}
+
+.login-circle {
+    height: 10px;
+    width: 10px;
+    background-color: #28C840;
+    border-radius: 50%;
+}
+
+.message-wrapper {
+    height: fit-content;
+    width: 95%;
+    
+    /* border: 2px solid yellow; */
+
+    display: flex;
+    align-items: center;
+
+    padding: 5px;
+    margin: 10px;
+}
+
+img {
+    height: 30px;
+    width: 30px;
+    
+    margin-right: 10px;
+}
+
+.message-text {
+    width: 100%;
+
+    margin-left: 15px;
+
+    font-size: 0.95em;
+
+    font-family: 'Source Sans 3';
+    font-weight: 200;
+
+    padding: 5px;
+    white-space: pre-wrap;
+}
+
+.message-text.system-text {
+    border: 1px dashed #aaa;
+    background-color: #2a2a40;
+
+    color: #ddd;
+    padding: 12px 16px;
+
+    border-radius: 10px;
+
+    font-family: "Source Sans 3", sans-serif;
+    line-height: 1.5;
+}

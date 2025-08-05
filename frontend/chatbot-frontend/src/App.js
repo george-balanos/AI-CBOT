@@ -1,28 +1,17 @@
-import { useState } from 'react';
-import './App.css';
-import WelcomeButton from './components/WelcomeButton/WelcomeButton'
-import './components/WelcomeButton/WelcomeButton.css'
+import { Routes, Route } from "react-router-dom"
 
-import UsernameBox from './components/UsernameDiv/UsernameBox'
-import './components/UsernameDiv/UsernameBox.css'
+import WelcomePage from './components/WelcomePage/WelcomePage';
+import './components/WelcomePage/WelcomePage.css'
+
+import ChatBoard from './components/ChatBoard/ChatBoard'
+import './components/ChatBoard/ChatBoard.css'
 
 function App() {
-  const [welcomeTextMoved, setWelcomeTextMoved] = useState(false)
-
-  const handleWelcomeButton = () => {
-    setWelcomeTextMoved(true)
-  }
-
   return (
-    <>
-      <div className="wrapper">
-        <div className={`welcome-text ${welcomeTextMoved ? "welcome-text-moved" : ''}`}>Welcome to AI-CBOT!</div>
-
-        {welcomeTextMoved && <UsernameBox welcomeTextMoved={welcomeTextMoved}/>}
-
-        <WelcomeButton onWelcome={handleWelcomeButton}/>
-      </div>
-    </>
+    <Routes>
+      <Route path="/" element={<WelcomePage />}></Route>
+      <Route path="/chat" element={<ChatBoard />}></Route>
+    </Routes>
   );
 }
 
